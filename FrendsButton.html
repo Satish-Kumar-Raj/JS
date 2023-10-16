@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fetures Button</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: gilroy;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: cornflowerblue;
+		}
+		.card{
+			display: flex;
+			/*justify-content: center;*/
+			align-items: center;
+			flex-direction: column;
+			border-radius: 10px;
+			border: 1px solid;
+			height: 400px;
+			width: 400px;
+			background-color: #ebbd34;
+			padding: 30px;	
+			gap: 20px;
+		}
+		.card img{
+			height: 50%;
+			width: 100%;
+			object-fit: cover;
+			/*padding: 10px;*/
+			object-position: center;
+			border-radius: 10px;
+		}
+		.card h4{
+			color: red;
+			font-size: 20px;
+		}
+		.button_container button{
+			padding: 5px;
+			font-size: 20px;
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="card">
+		<img src="https://media.istockphoto.com/id/1221041044/photo/teenage-girl-at-white-background-stock-images.webp?b=1&s=170667a&w=0&k=20&c=0Gy4mH-Gobn1EeqlVOPicXxWQtl3Y9IhVrumvlxFZKk=">
+		<h2>Angle Priya</h2>
+		<h4 id="st">Stranger</h4>
+		<div class="button_container">
+		
+
+			<button id="add">Add Friends</button>
+		</div>
+	</div>
+<script type="text/javascript">
+	// let remove=document.querySelector('#remove');
+	let add=document.querySelector('#add');
+	let status=document.querySelector("h4");
+	// add.addEventListener("click",function(){
+	// 		status.innerHTML="Friends";
+	// 		status.style.color="green"
+	// })
+	// remove.addEventListener("click",function(){
+	// 	status.innerHTML="Stranger";
+	// })
+	let flag=0;
+	add.addEventListener("click",function(){
+		if(flag===0){
+			status.innerHTML="Friends";
+			status.style.color="green";
+			flag=1;
+		}
+
+		else{
+			status.innerHTML="Stranger"
+			status.style.color="red"
+			flag=0;
+		}
+	})
+
+
+
+
+</script>
+</body>
+</html>
